@@ -129,6 +129,7 @@ function removeStyleElement(styleElement) {
 function createStyleElement(options) {
 	var styleElement = document.createElement("style");
 	styleElement.type = "text/css";
+        styleElement.setAttribute("scrible-ignore","");
 	insertStyleElement(options, styleElement);
 	return styleElement;
 }
@@ -136,6 +137,7 @@ function createStyleElement(options) {
 function createLinkElement(options) {
 	var linkElement = document.createElement("link");
 	linkElement.rel = "stylesheet";
+        linkElement.setAttribute("scrible-ignore","");
 	insertStyleElement(options, linkElement);
 	return linkElement;
 }
